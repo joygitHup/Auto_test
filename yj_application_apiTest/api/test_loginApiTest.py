@@ -3,9 +3,13 @@ import logging
 import unittest
 import requests
 from yj_application_apiTest.config import httpConfig
+from yj_application_apiTest.config.pathconfig import casefilePath
 from yj_application_apiTest.tools.logClas import MyLog
+from yj_application_apiTest.tools.readExcel import openSheet
+
 
 class Test_login(unittest.TestCase):
+  '''用户登录'''
   def setup(self):
      print("-----start----")
   def test_loginApicase1(self):
@@ -58,6 +62,33 @@ class Test_login(unittest.TestCase):
     self.assertEqual(599,recode)
   def tearDown(self):
      print('-----end------')
+
+
+# 通过数据表格管理用例
+class Test_login2(unittest.TestCase):
+   '''数据表格管理用例_登录测试用例'''
+   def setUp(self):
+       pass
+   def test_loginApicase1(self):
+       MyLog.info("开始:{}".format('测试登录接口'))
+       url = httpConfig.host + httpConfig.wholeURl
+       data = openSheet(filepath=casefilePath,clo=9,row=2)
+       headers = httpConfig.headers
+       re = requests.post(url, data=data, headers=headers, verify=False)
+       recode = re.status_code
+       result = json.loads(re.text)
+       self.assertEqual(300, recode)
+       self.assertTrue('token' in re.text)
+       # 添加断言
+       # try:
+       #
+       # except AssertionError as e:
+       #    print(e)
+       return result['token']
+   def tearDown(self):
+       pass
+
+
 
 def  upload_file():
     MyLog.info("开始:{}".format('上传接口_' + '账户名和用户名都错误的用例'))
