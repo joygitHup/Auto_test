@@ -1,2 +1,4 @@
 # Auto_test
-包括UI自动化利接口自动化
+1.yj_application_apiTest 接口测试 
+2.yj_autoTest_UI  UI自动化
+

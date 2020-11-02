@@ -1,6 +1,5 @@
 import json
 import  xlrd
-
 def openSheet(filepath,clo,row):
  '''
  :param filepath: 接口测试文件名
