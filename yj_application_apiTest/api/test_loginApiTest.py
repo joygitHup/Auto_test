@@ -7,7 +7,6 @@ from yj_application_apiTest.config.pathconfig import casefilePath
 from yj_application_apiTest.tools.logClas import MyLog
 from yj_application_apiTest.tools.redexcel import openSheet
 
-
 class Test_login(unittest.TestCase):
   '''用户登录,并分返回token以便被其他应用'''
   def setup(self):
@@ -107,7 +106,7 @@ class rebuiding_work_class(unittest.TestCase):
         url = httpConfig.host + 'desktop/inspection_sheets/field_values/?page=1&page_size=100'
         data = {"keyword": "", "field_key": "member_a"}
         headers = httpConfig.headers
-        headers['Authorization'] = 'JWT ' + Test_login.test_loginApicase1()
+        headers['Authorization'] = 'JWT ' + Test_login.test_loginApicase1(self)
         re = requests.post(url, data=data, headers=headers, verify=False)
         result = json.loads(re.text)
         return result
@@ -185,7 +184,6 @@ class pepole_class(unittest.TestCase):
         result = json.loads(re.text)
         print(result)
         return result
-
     def pepole_list_secher(self):
         logging.captureWarnings(True)
         url = httpConfig.host + 'admin/users/?user__username__icontains=wang'

@@ -11,11 +11,3 @@ casefilePath='E:\\DevWorkSpace\Auto_test\\yj_application_apiTest\\data\\接口�
 #jmeter的接口关联测试
 #jmter结合jgranf监控服务器性能
 
-#studentSkill
-#1.做工作计划
-#2.对计划安排优先级
-#3.执行计划
-#4.善于授权
-#5.
-
-#态度 优先顺序
