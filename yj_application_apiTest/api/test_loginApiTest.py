@@ -6,7 +6,6 @@ from yj_application_apiTest.config import httpConfig
 from yj_application_apiTest.config.pathconfig import casefilePath
 from yj_application_apiTest.tools.logClas import MyLog
 from yj_application_apiTest.tools.redexcel import openSheet
-
 class Test_login(unittest.TestCase):
   '''用户登录,并分返回token以便被其他应用'''
   def setup(self):
@@ -35,7 +34,6 @@ class Test_login(unittest.TestCase):
     result=json.loads(re.text)
     #添加断言
     self.assertEqual(599,recode)
-
   def test_loginApicase_username_erro(self):
     # logging.captureWarnings(True)
     MyLog.info("开始:{}".format('测试登录接口_'+'账户名和用户名都错误的用例'))
@@ -47,7 +45,6 @@ class Test_login(unittest.TestCase):
     result=json.loads(re.text)
     #添加断言
     self.assertEqual(200,recode)
-
   def test_loginApicase_pwd_erro(self):
     # logging.captureWarnings(True)
     MyLog.info("开始:{}".format('测试登录接口_'+'账户名和用户名都错误的用例'))
@@ -61,8 +58,6 @@ class Test_login(unittest.TestCase):
     self.assertEqual(599,recode)
   def tearDown(self):
      print('-----end------')
-
-
 
 # 通过数据表格管理用例
 class Test_login2(unittest.TestCase):
@@ -81,7 +76,6 @@ class Test_login2(unittest.TestCase):
        self.assertEqual(200, recode)
        self.assertTrue('token' in re.text)
        # try:
-       #
        # except AssertionError as e:
        #    print(e)
        return result['token']
@@ -89,7 +83,7 @@ class Test_login2(unittest.TestCase):
        pass
 
 class rebuiding_work_class(unittest.TestCase):
-    def setUp(self) -> None:
+    def setUp(self) :
         pass
     def upload_file(self):
         MyLog.info("开始:{}".format('上传接口_' + '账户名和用户名都错误的用例'))
@@ -110,42 +104,38 @@ class rebuiding_work_class(unittest.TestCase):
         re = requests.post(url, data=data, headers=headers, verify=False)
         result = json.loads(re.text)
         return result
-
     def rebuid_work_category_list(self):
         logging.captureWarnings(True)
         url = httpConfig.host + 'desktop/inspection_sheets/field_values/'
         data = {"keyword": "", "field_key": "work_category"}
         headers = httpConfig.headers
-        headers['Authorization'] = 'JWT ' + loginApi()
+        headers['Authorization'] = 'JWT ' + Test_login.test_loginApicase1(self)
         print(headers)
         re = requests.post(url, data=data, headers=headers, verify=False)
         result = json.loads(re.text)
         print(result)
         return result
-
     def rebuid_work_category_content_lsits(self):
         logging.captureWarnings(True)
         url = httpConfig.host + 'desktop/inspection_sheets/field_values/'
         data = {"keyword": "", "field_key": "work_content", "work_category": "c38dcb34-eec9-11ea-8f22-38f9d355d676"}
         headers = httpConfig.headers
-        headers['Authorization'] = 'JWT ' + loginApi()
+        headers['Authorization'] = 'JWT ' + Test_login.test_loginApicase1(self)
         re = requests.post(url, data=data, headers=headers, verify=False)
         result = json.loads(re.text)
         print(result)
         return result
-
     def rebuid_work_resources_uploadsignature(self):
         logging.captureWarnings(True)
         url = httpConfig.host + 'desktop/inspection_sheets/field_values/'
         data = {"type": 200, "extension": "jpg"}
         headers = httpConfig.headers
-        headers['Authorization'] = 'JWT ' + loginApi()
+        headers['Authorization'] = 'JWT ' + Test_login.test_loginApicase1(self)
         files = {"file": ("10.jpg", open("D:\\Pictures\\10.jpg", "rb"), "image/jpeg", {})}
         data['files'] = data
         re = requests.post(url, data=data, headers=headers, verify=False)
         result = json.loads(re.text)
         return result
-
     def rebuiding_work(self):
         # desktop / inspection_sheets /stages/
         logging.captureWarnings(True)
@@ -162,15 +152,13 @@ class rebuiding_work_class(unittest.TestCase):
                  "work_content": "da8365d8-eec9-11ea-944d-38f9d355d676",
                  "initial_remark": [], "stage": "0"}]}
         headers = httpConfig.headers
-        headers['Authorization'] = 'JWT ' + loginApi()
+        headers['Authorization'] = 'JWT ' + Test_login.test_loginApicase1(self)
         re = requests.post(url, json=data, headers=headers, verify=False)
         result = json.loads(re.text)
         print(result)
         return result
-
     def tearDown(self) :
         pass
-
 class pepole_class(unittest.TestCase):
     def setUp(self) :
         pass
@@ -194,7 +182,6 @@ class pepole_class(unittest.TestCase):
         result = json.loads(re.text)
         print(result)
         return result
-
     def pepole_list_Add(self):
         logging.captureWarnings(True)
         url = httpConfig.host + 'admin/signup/'
@@ -209,7 +196,6 @@ class pepole_class(unittest.TestCase):
         # return result
     def tearDown(self) :
         pass
-
 if __name__=="__main__":
   unittest.main()
 
