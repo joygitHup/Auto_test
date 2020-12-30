@@ -1,12 +1,9 @@
 import unittest
-
 import time
 from appium import webdriver
-from config import config
-from common import htmlTestRunner
-from common import iniHelper
-from config import config
-from  common.getScreenShot import SccreShortMethod
+from ..common import iniHelper
+from ..config import config
+from  ..common.getScreenShot import SccreShortMethod
 des = {}
 des['platformName'] = config.DEVICE_INFOR_PLATFORMNAME
 des['platformVersion'] = config.DEVICE_INFOR_platformVersion

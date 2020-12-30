@@ -6,22 +6,20 @@
 # time.sleep(3)
 # driver.quit()
 import os
-
 from appium import webdriver
-
-from common import iniHelper
 import  unittest
 import time
-from common import htmlTestRunner
+
+from yj_autoTest_UI.common import iniHelper, htmlTestRunner
 
 des = {}
 des['platformName'] = 'Android'
-des['platformVersion'] = '9.0'
-des['deviceName'] = 'S4Y4C19308001754'
+des['platformVersion'] = '8.1.0'
+des['deviceName'] = 'ZZGT00B0001T1N00002'
 des['appPackage']='com.yunjihk.install.mobile'
 des['autoGrantPermissions']=True
-des['app']="E:\\Yunjiapk\\smartstepsmobile.apk"
-des['appActivity']='com.yunjihk.install.mobile.ui.activity.SplashByPhoneAct'
+des['app']="D:\\yjapk\\smartsteps.apk"
+des['appActivity']='.ui.activity.SplashByPhoneAct'
 # com.yunjihk.helmet.ui.SplashByGlassAct
 print(des)
 driver=webdriver.Remote('http://localhost:4723/wd/hub', des)

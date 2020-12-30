@@ -18,8 +18,6 @@ class test_budinwordsheet_dutypepole(unittest.TestCase):
          print(response.status_code)
     def tearDown(self):
         pass
-
-
 class test_renew_apitest(unittest.TestCase):
     '''
     提交新建工作票的接口测试
@@ -36,6 +34,37 @@ class test_renew_apitest(unittest.TestCase):
         # 添加断言
         print(result)
     def tearDown(self):
+        pass
+
+class alternative_new_voice(unittest.TestCase):
+    '''切换到新建作业票'''
+    def setUp(self):
+        pass
+    def alter_voice(self):
+        '/kw/desktop/inspection_sheets/field_values/recommend/'
+        pass
+    def tearDown(self) :
+        pass
+class upload_file_remark(unittest.TestCase):
+    def setUp(self) :
+        pass
+    def uploadfile_remark(self):
+        pass
+    def tearDown(self) :
+        pass
+class  worksheet_Manger(unittest.TestCase):
+    def setUp(self) -> None:
+        pass
+    def gain_worksheet_list(self):
+        pass
+    def tearDown(self) -> None:
+        pass
+class worksheet_content(unittest.TestCase):
+    def setUp(self) -> None:
+        pass
+    def worksheet_content_infor(self):
+        pass
+    def tearDown(self) -> None:
         pass
 if __name__=="__main__":
   unittest.main()

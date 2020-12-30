@@ -5,6 +5,7 @@ casedir='E:\\DevWorkSpace\\pythonstudio\\yj_application_apiTest\\api'
 
 casefilePath='E:\\DevWorkSpace\Auto_test\\yj_application_apiTest\\data\\接口测试模板-登录.xlsx'
 #Jenkins继承自动化脚本
+
 #创建git账号
 
 #添加计算机自带的定时执行任务

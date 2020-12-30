@@ -10,6 +10,7 @@ deviceInfor={
       'appActivity':'com.yunjihk.install.mobile.ui.activity.SplashByPhoneAct'
    }
 }
+
 DEVICE_INFOR_PLATFORMNAME=deviceInfor['device']['platformName']
 DEVICE_INFOR_platformVersion=deviceInfor['device']['platformVersion']
 DEVICE_INFOR_deviceName=deviceInfor['device']['deviceName']
@@ -28,7 +29,6 @@ settings = {
 }
 ADMIN_NUMBER = settings['admin']['number']
 ADMIN_PASSWORD = settings['admin']['password']
-
 #文件路径信息
 FilePath={
    'filePath':{

@@ -2,11 +2,8 @@ import unittest
 import requests
 from yj_application_apiTest.config import httpConfig
 from yj_application_apiTest.otherFile.test import test_loginApicase1
-
 class test_workvideo_list(unittest.TestCase):
-    '''
-    通过数据线连接到电脑端，初始化获取设备中的视频文件
-    '''
+    '''通过数据线连接到电脑端，初始化获取设备中的视频文件'''
     def setUp(self):
         pass
     def test_worvideolist(self):
@@ -17,11 +14,8 @@ class test_workvideo_list(unittest.TestCase):
         print(response.status_code)
     def tearDown(self):
         pass
-
 class test_workvideos_apiTest(unittest.TestCase):
-    '''
-    连接设备后，通过数据上传设备中采集的信息
-    '''
+    '''连接设备后，通过数据上传设备中采集的信息'''
     def setUp(self):
         pass
     def  test_workvideos(self):
@@ -30,3 +24,4 @@ class test_workvideos_apiTest(unittest.TestCase):
        pass
 if __name__=="__main__":
     unittest.main()
+

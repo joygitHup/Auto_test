@@ -58,7 +58,6 @@ class Test_login(unittest.TestCase):
     self.assertEqual(599,recode)
   def tearDown(self):
      print('-----end------')
-
 # 通过数据表格管理用例
 class Test_login2(unittest.TestCase):
    '''数据表格管理用例_登录测试用例'''
@@ -81,7 +80,6 @@ class Test_login2(unittest.TestCase):
        return result['token']
    def tearDown(self):
        pass
-
 class rebuiding_work_class(unittest.TestCase):
     def setUp(self) :
         pass
@@ -196,11 +194,12 @@ class pepole_class(unittest.TestCase):
         # return result
     def tearDown(self) :
         pass
+
 if __name__=="__main__":
   unittest.main()
-
 # 上传文件接口 测试的demo
-#
+
+
 
 
 

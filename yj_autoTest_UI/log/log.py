@@ -1,7 +1,7 @@
 # -*-coding:utf-8 -*-
 import os
 import logging
-from  config import config
+from  ..config import config
 
 # 定义了blog_ui项目的绝对路径
 base_url = config.LOG_SAVE_PATH
