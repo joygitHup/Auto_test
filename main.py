@@ -69,7 +69,7 @@ if __name__=='__main__':
     # git config --global user.email "you@example.com"
     # git config --global user.name "Your Name"
     # 4.git commit -m '描述'  提交添加进来的代码块 在这之前有可能还要登录
-    # 5.git remote add origin https://github.com/joygitHup/Auto_test.git  连接到远程仓库(可以先连接)
+    # 5.git remote add origin https://github.com/joygitHup/Auto_test.git  连接到远程仓库(可以先连接) git@github.com:joygitHup/Auto_test.git
     # 6.git push -u origin master  推送代码到分支
 
 
