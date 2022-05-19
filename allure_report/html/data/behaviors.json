@@ -1,0 +1,39 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "调整质押率",
+    "children" : [ {
+      "name" : "接口正常访问",
+      "children" : [ {
+        "name" : "test_borrow_list_api_01",
+        "uid" : "dfea4bdf44f852c1",
+        "parentUid" : "3f2c6d82a58724c3d42d7d920fe36571",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652930853658,
+          "stop" : 1652930854060,
+          "duration" : 402
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_borrow_list_api_02",
+        "uid" : "ae433e3c232a5ac4",
+        "parentUid" : "3f2c6d82a58724c3d42d7d920fe36571",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652930854063,
+          "stop" : 1652930854247,
+          "duration" : 184
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "3f2c6d82a58724c3d42d7d920fe36571"
+    } ],
+    "uid" : "31d18b75613153c83ffb0c5fc78c75f7"
+  } ]
+}

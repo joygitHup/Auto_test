@@ -1,0 +1,21 @@
+[ {
+  "uid" : "ae433e3c232a5ac4",
+  "name" : "test_borrow_list_api_02",
+  "time" : {
+    "start" : 1652930854063,
+    "stop" : 1652930854247,
+    "duration" : 184
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "dfea4bdf44f852c1",
+  "name" : "test_borrow_list_api_01",
+  "time" : {
+    "start" : 1652930853658,
+    "stop" : 1652930854060,
+    "duration" : 402
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
